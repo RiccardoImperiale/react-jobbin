@@ -1,3 +1,4 @@
+import Cards from "./components/Cards"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 
@@ -5,11 +6,10 @@ function App() {
 
   return (
     <>
-      <header>
-        <Header />
-      </header>
+      <Header />
       <main>
         <Hero />
+        <Cards />
       </main>
       <footer></footer>
     </>

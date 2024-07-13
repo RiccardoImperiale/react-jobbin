@@ -1,0 +1,11 @@
+.cards {
+    display: flex;
+
+    .card {
+        width: 50%;
+        padding: 2rem;
+        text-align: center;
+        background-color: aqua;
+        border-radius: .5rem;
+    }
+}
