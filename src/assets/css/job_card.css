@@ -1,0 +1,73 @@
+.job_card {
+    background-color: var(--jo-lighter);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 100%;
+
+    .top {
+        .badges {
+            display: flex;
+
+            span {
+                padding: .45rem 1.5rem;
+                display: block;
+                border-radius: 2rem;
+                border: 1px solid var(--jo-secondary);
+            }
+        }
+
+        .job_title {
+            padding-top: 1rem;
+            padding-bottom: .5rem;
+        }
+    }
+
+    .middle {
+        .description {
+            font-size: .85rem;
+        }
+
+        .salary {
+            color: var(--jo-primary);
+            font-weight: bold;
+            padding: 1rem 0;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #e4e4e4;
+        padding-top: 2rem;
+
+        .location {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            .icon {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .job_card {
+        width: calc(100% / 2 - 2rem);
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .job_card {
+        width: calc(100% / 3 - 4rem / 3);
+    }
+
+}

@@ -1,0 +1,18 @@
+.job_listings {
+    background-color: var(--jo-primary);
+    background-color: var(--jo-secondary);
+    background-color: var(--jo-light);
+    /* background-color: #92e3a94c; */
+    padding: 3rem 0;
+
+    .title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .jobs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}

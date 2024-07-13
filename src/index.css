@@ -46,3 +46,11 @@ a {
   cursor: pointer;
   color: var(--jo-light);
 }
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
