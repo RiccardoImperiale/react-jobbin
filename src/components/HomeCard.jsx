@@ -1,8 +1,8 @@
-import '../assets/css/card.css'
+import '../assets/css/home_card.css'
 
-export default function Card({ title, subtitle, btnIcon, btnText, icon }) {
+export default function HomeCard({ title, subtitle, btnIcon, btnText, icon }) {
     return (
-        <div className="card">
+        <div className="home_card">
             <div className="top">
                 {icon}
                 <h3>{title}</h3>

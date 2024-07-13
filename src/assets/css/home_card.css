@@ -1,4 +1,4 @@
-.card {
+.home_card {
     width: 50%;
     padding: 2rem;
     text-align: center;
@@ -43,7 +43,7 @@
 
 @media screen and (max-width: 768px) {
 
-    .card {
+    .home_card {
         width: 100%;
     }
 

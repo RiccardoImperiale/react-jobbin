@@ -1,4 +1,4 @@
-import Cards from "./components/Cards"
+import HomeCards from "./components/HomeCards"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 
@@ -9,7 +9,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Cards />
+        <HomeCards />
       </main>
       <footer></footer>
     </>

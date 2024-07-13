@@ -1,4 +1,4 @@
-.cards {
+.home_cards {
     display: flex;
     gap: 2rem;
     padding-bottom: 3rem;
@@ -6,7 +6,7 @@
 
 @media screen and (max-width: 768px) {
 
-    .cards {
+    .home_cards {
         flex-wrap: wrap;
     }
 }
