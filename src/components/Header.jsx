@@ -14,7 +14,7 @@ export default function Header() {
     return (
         <header>
             <nav className='container'>
-                <div className="logo">jobbi</div>
+                <div className="logo">Jobbin</div>
                 <div className="nav_links">
                     <ul>
                         <li><a href="#">Home</a></li>
