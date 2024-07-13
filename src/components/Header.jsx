@@ -1,5 +1,10 @@
+import '../assets/css/header.css'
 export default function Header() {
     return (
-        <div>Header</div>
+        <header>
+            <nav className='container'>
+                dw
+            </nav>
+        </header>
     )
 }
