@@ -7,7 +7,7 @@ function App() {
       <header>
         <Header />
       </header>
-      <main>fef</main>
+      <main></main>
       <footer></footer>
     </>
   )
