@@ -34,7 +34,6 @@ export default function Header() {
                 initial={{ y: '-100%' }}
                 animate={{ y: isOpen ? '0%' : '-100%' }}
                 transition={{ type: 'tween', duration: 0.25 }}
-                style={{ zIndex: 2 }}
             >
                 <nav className="container">
                     <a href="#">Home</a>
