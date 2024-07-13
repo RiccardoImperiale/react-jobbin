@@ -1,25 +1,35 @@
 import { FaLocationDot } from "react-icons/fa6";
 import '../assets/css/job_card.css'
+import { useState } from "react";
 
-
-export default function JobCard() {
+export default function JobCard({ job }) {
+    const [showMore, setShowMore] = useState(false)
+    let description = job.description
+    if (!showMore) {
+        description = description.substring(0, 100) + '...'
+    }
     return (
         <div className="job_card">
             <div className="top">
                 <div className='badges'>
-                    <span>Full Time</span>
+                    <span>{job.type}</span>
                 </div>
-                <h3 className="job_title">Senior React Developer</h3>
+                <h3 className="job_title">{job.title}</h3>
+                <p className="description">{description}</p>
+                <small onClick={() => setShowMore(!showMore)} className="show_more">
+                    {showMore ? 'Show Less' : 'Show More'}
+                </small>
             </div>
-            <div className="middle">
-                <p className="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam sunt nihil fugit? Reiciendis, ducimus in! Repellendus minima, architecto sunt doloremque nam obcaecati quo numquam itaque, laboriosam quae recusandae, consequuntur natus.</p>
-                <div className="salary">$70K - $70K / Year</div>
-            </div>
-            <div className="bottom">
-                <div className="location"><FaLocationDot className='icon' />
-                    <span>Boston</span>
+
+            <div className="bottom_card">
+                <div className="salary">{job.salary} <span>/ Year</span></div>
+
+                <div className="wrapper">
+                    <div className="location"><FaLocationDot className='icon' />
+                        <span>{job.location}</span>
+                    </div>
+                    <a className='btn_dark' href={`/job/${job.id}`}>Read More</a>
                 </div>
-                <a className='btn_dark' href="#">Read More</a>
             </div>
         </div>
     )
