@@ -1,6 +1,7 @@
 import Hero from "../components/Hero"
 import HomeCards from "../components/HomeCards"
 import JobListings from "../components/JobListings"
+import ShowAllJobsBtn from "../components/ShowAllJobsBtn"
 
 export default function HomePage() {
     return (
@@ -8,6 +9,7 @@ export default function HomePage() {
             <Hero />
             <HomeCards />
             <JobListings />
+            <ShowAllJobsBtn />
         </main>
     )
 }

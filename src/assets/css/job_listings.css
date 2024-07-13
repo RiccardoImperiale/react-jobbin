@@ -14,31 +14,5 @@
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
-        padding-bottom: 3rem;
-    }
-
-    .bottom {
-        display: flex;
-        align-items: center;
-
-        .btn_all_jobs {
-            margin: auto;
-            background-color: var(--jo-light);
-            border: 1px solid var(--jo-secondary);
-            color: var(--jo-dark);
-            padding: 1rem 2.5rem;
-            font-weight: 500;
-            transition: .25s ease;
-
-            &:hover {
-                background-color: var(--jo-dark);
-                color: var(--jo-light);
-                border: 1px solid var(--jo-secondary);
-            }
-
-            &:hover .icon {
-                color: var(--jo-primary);
-            }
-        }
     }
 }
