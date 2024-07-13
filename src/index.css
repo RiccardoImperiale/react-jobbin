@@ -19,6 +19,7 @@ body {
   background-color: var(--jo-light);
   color: var(--jo-dark);
   font-family: "Poppins", sans-serif;
+  user-select: none;
 }
 
 .container {

@@ -1,15 +1,41 @@
+import { useEffect, useState } from 'react';
 import '../assets/css/job_listings.css'
 import JobCard from './JobCard';
-import jobs from '../jobs.json'
+import Spinner from './Spinner';
 
 export default function JobListings({ isHome = true }) {
-    const jobList = isHome ? jobs.slice(0, 3) : jobs;
+    const [jobs, setJobs] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        const fetchJobs = async () => {
+            const apiUrl = isHome ? 'http://localhost:8000/jobs?_limit=3' : 'http://localhost:8000/jobs'
+            try {
+                const res = await fetch(apiUrl)
+                const data = await res.json()
+                setJobs(data)
+            } catch (err) {
+                console.log('Error fetching data', err);
+            } finally {
+                setLoading(false)
+            }
+        }
+        fetchJobs()
+    }, [])
+
     return (
         <section className="job_listings">
+            {console.log(loading)}
             <div className="container">
                 <h2 className="title">{isHome ? 'Recent Jobs' : 'Browse Jobs'} </h2>
                 <div className="jobs">
-                    {jobList.map((job) => <JobCard key={job.id} job={job} />)}
+                    {loading ? (
+                        <Spinner loading={loading} />
+                    ) : (
+                        <>
+                            {jobs.map((job) => <JobCard key={job.id} job={job} />)}
+                        </>
+                    )}
                 </div>
             </div>
         </section>

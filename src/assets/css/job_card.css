@@ -6,6 +6,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: background-color .45s ease, box-shadow .45s ease;
+
+    &:hover {
+        background-color: var(--jo-lighter);
+        box-shadow: 20px 20px 20px #e1e1e1,
+            -20px -20px 50px var(--jo-lighter);
+    }
 
     .top {
         .badges {
@@ -16,6 +23,7 @@
                 display: block;
                 border-radius: 2rem;
                 border: 1px solid var(--jo-secondary);
+                color: var(--jo-secondary-dark);
             }
         }
 

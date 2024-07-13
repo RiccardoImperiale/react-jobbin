@@ -1,7 +1,8 @@
 .show_all_jobs {
     display: flex;
     align-items: center;
-    margin-top: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
 
     .btn_all_jobs {
         margin: auto;
