@@ -1,22 +1,12 @@
 .cards {
     display: flex;
-
-    .card {
-        width: 50%;
-        padding: 2rem;
-        text-align: center;
-        background-color: aqua;
-        border-radius: .5rem;
-    }
+    gap: 2rem;
+    padding-bottom: 3rem;
 }
 
 @media screen and (max-width: 768px) {
 
     .cards {
         flex-wrap: wrap;
-
-        .card {
-            width: 100%;
-        }
     }
 }

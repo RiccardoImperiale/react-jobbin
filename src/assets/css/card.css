@@ -1,0 +1,50 @@
+.card {
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--jo-light);
+    border-radius: 1rem;
+    transition: background-color .45s ease, box-shadow .45s ease;
+
+    .top {
+        margin-bottom: 1.6rem;
+
+        .icon {
+            font-size: 3rem;
+            color: var(--jo-secondary);
+        }
+
+        div {
+            font-size: .9rem;
+            padding-top: .6rem;
+        }
+
+    }
+
+    .bottom {
+        display: flex;
+
+        .btn_dark {
+            margin: auto;
+        }
+    }
+
+
+    &:hover {
+        background-color: var(--jo-light);
+        box-shadow: 20px 20px 20px #dddddd,
+            -20px -20px 20px #ffffff;
+    }
+
+    &:hover .icon {
+        color: var(--jo-primary);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .card {
+        width: 100%;
+    }
+
+}

@@ -1,17 +1,15 @@
 import '../assets/css/cards.css'
+import Card from './Card';
+import { AiOutlineTeam, AiOutlineUser } from "react-icons/ai";
+import { FaPaperPlane, FaSearch } from "react-icons/fa";
+
 
 export default function Cards() {
     return (
         <section className='cards container'>
-            <div className="card">
-                <h3>For developers</h3>
-                <div>Browse our React jobs and start your careere today</div>
-                <a className='btn_dark' href="#">afwefw</a>
-            </div>
-            <div className="card">
-                <h3>For developers</h3>
-                <div>Browse our React jobs and start your careere today</div>
-            </div>
+            <Card title="For Developers" subtitle="Browse our jobs and start your career today" btnText="Browse Jobs" btnIcon={<FaPaperPlane />} icon={<AiOutlineUser className='icon' />} />
+            <Card title="For Employers" subtitle="List your job to find the perfect developer for the role" btnText="Post Job" btnIcon={<FaSearch />} icon={<AiOutlineTeam className='icon' />} />
+
         </section>
     )
 }
