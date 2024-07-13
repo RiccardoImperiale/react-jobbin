@@ -80,6 +80,15 @@ header {
     background-color: rgba(0, 0, 0, 0.55);
 }
 
+.current_page {
+    color: var(--jo-dark);
+}
+
+.inactive {
+    color: var(--jo-secondary-dark);
+}
+
+
 @media screen and (max-width: 475px) {
     header .nav_links {
         display: none;

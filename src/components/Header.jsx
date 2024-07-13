@@ -1,4 +1,5 @@
 import '../assets/css/header.css';
+import { NavLink } from 'react-router-dom';
 import { FaPaperPlane } from "react-icons/fa";
 import { LiaGripLinesSolid } from "react-icons/lia";
 import { IoCloseOutline } from "react-icons/io5";
@@ -7,6 +8,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+
+    const linkClass = ({ isActive }) => isActive ? 'current_page' : 'inactive'
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -19,9 +22,9 @@ export default function Header() {
                     <div className="logo">Jobbin</div>
                     <div className="nav_links">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a className='btn_dark' href="#">Post a Job <FaPaperPlane /></a></li>
+                            <li><NavLink to="/" className={linkClass}>Home</NavLink></li>
+                            <li><NavLink to="/jobs" className={linkClass}>Jobs</NavLink></li>
+                            <li><NavLink className='btn_dark' to="/post-job">Post a Job <FaPaperPlane /></NavLink></li>
                         </ul>
                     </div>
                     <div className="btn_dark mob_btn_pill" onClick={toggleMenu}>
@@ -36,9 +39,9 @@ export default function Header() {
                 transition={{ type: 'tween', duration: 0.25 }}
             >
                 <nav className="container">
-                    <a href="#">Home</a>
-                    <a href="#">Jobs</a>
-                    <a className='btn_dark' href="#">Post a Job <FaPaperPlane /></a>
+                    <NavLink to="/" className={linkClass}>Home</NavLink>
+                    <NavLink to="/jobs" className={linkClass}>Jobs</NavLink>
+                    <NavLink className='btn_dark' to="/post-job">Post a Job <FaPaperPlane /></NavLink>
                 </nav>
             </motion.div>
 
@@ -54,7 +57,6 @@ export default function Header() {
                     />
                 )}
             </AnimatePresence >
-
         </>
     );
 }

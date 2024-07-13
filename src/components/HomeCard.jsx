@@ -1,6 +1,7 @@
 import '../assets/css/home_card.css'
+import { Link } from 'react-router-dom'
 
-export default function HomeCard({ title, subtitle, btnIcon, btnText, icon }) {
+export default function HomeCard({ title, subtitle, btnIcon, btnText, icon, linkTo }) {
     return (
         <div className="home_card">
             <div className="top">
@@ -9,7 +10,7 @@ export default function HomeCard({ title, subtitle, btnIcon, btnText, icon }) {
                 <div>{subtitle}</div>
             </div>
             <div className="bottom">
-                <a className='btn_dark' href="#">{btnText} {btnIcon}</a>
+                <Link className='btn_dark' to={linkTo}>{btnText} {btnIcon}</Link>
             </div>
         </div>
     )

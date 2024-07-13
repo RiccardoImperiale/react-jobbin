@@ -2,6 +2,7 @@ import '../assets/css/job_listings.css'
 import JobCard from './JobCard';
 import jobs from '../jobs.json'
 import { MdFileDownload } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 export default function JobListings() {
     const recentJobs = jobs.slice(0, 3)
@@ -14,9 +15,9 @@ export default function JobListings() {
                 </div>
 
                 <div className="bottom">
-                    <a href="/jobs" className="btn_dark btn_all_jobs"><MdFileDownload className='icon' />
+                    <Link to="/jobs" className="btn_dark btn_all_jobs"><MdFileDownload className='icon' />
                         See All Job Positions <MdFileDownload className='icon' />
-                    </a>
+                    </Link>
                 </div>
 
             </div>

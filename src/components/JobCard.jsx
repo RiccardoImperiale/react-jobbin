@@ -1,6 +1,7 @@
 import { FaLocationDot } from "react-icons/fa6";
 import '../assets/css/job_card.css'
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function JobCard({ job }) {
     const [showMore, setShowMore] = useState(false)
@@ -23,12 +24,11 @@ export default function JobCard({ job }) {
 
             <div className="bottom_card">
                 <div className="salary">{job.salary} <span>/ Year</span></div>
-
                 <div className="wrapper">
                     <div className="location"><FaLocationDot className='icon' />
                         <span>{job.location}</span>
                     </div>
-                    <a className='btn_dark' href={`/job/${job.id}`}>Read More</a>
+                    <Link className='btn_dark' to={`/job/${job.id}`}>Read More</Link>
                 </div>
             </div>
         </div>
