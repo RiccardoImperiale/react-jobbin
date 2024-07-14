@@ -1,4 +1,5 @@
 import '../assets/css/header.css';
+import logo from '../assets/img/logo.png'
 import { NavLink } from 'react-router-dom';
 import { FaPaperPlane } from "react-icons/fa";
 import { LiaGripLinesSolid } from "react-icons/lia";
@@ -19,7 +20,7 @@ export default function Header() {
         <>
             <header>
                 <nav className='container'>
-                    <div className="logo">Jobbin</div>
+                    <NavLink to='/' ><img src={logo} alt="" /></NavLink>
                     <div className="nav_links">
                         <ul>
                             <li><NavLink to="/" className={linkClass}>Home</NavLink></li>
