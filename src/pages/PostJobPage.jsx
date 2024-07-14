@@ -16,7 +16,7 @@ export default function PostJobPage({ postJob }) {
 
     const navigate = useNavigate()
 
-    function submitForm(e) {
+    async function submitForm(e) {
         e.preventDefault()
 
         const newJob = {
@@ -33,7 +33,7 @@ export default function PostJobPage({ postJob }) {
             }
         }
 
-        postJob(newJob);
+        await postJob(newJob);
         toast.success('Job created successfully')
         return navigate('/jobs')
     }
