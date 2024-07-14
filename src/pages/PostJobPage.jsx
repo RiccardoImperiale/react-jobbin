@@ -1,6 +1,6 @@
+import '../assets/css/job_form.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import '../assets/css/post_job.css'
 import { toast } from 'react-toastify';
 
 export default function PostJobPage({ postJob }) {
@@ -41,7 +41,7 @@ export default function PostJobPage({ postJob }) {
     return (
         <div className="container">
             <h2 className="title">Post a Job</h2>
-            <div className="post_job">
+            <div className="job_form">
                 <form onSubmit={submitForm}>
                     <h3>Job Info</h3>
 

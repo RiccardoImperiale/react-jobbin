@@ -1,4 +1,4 @@
-import '../assets/css/edit_job.css'
+import '../assets/css/job_form.css'
 import { useState } from 'react'
 import { useNavigate, useLoaderData, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -43,8 +43,8 @@ export default function EditJobPage({ updateJob }) {
 
     return (
         <div className="container">
-            <h2 className="title">Post a Job</h2>
-            <div className="post_job">
+            <h2 className="title">Edit Job</h2>
+            <div className="job_form">
                 <form onSubmit={submitForm}>
                     <h3>Job Info</h3>
 
@@ -159,7 +159,7 @@ export default function EditJobPage({ updateJob }) {
                     </div>
                     <div className="bottom">
                         <h5>* required fields</h5>
-                        <button type='submit' className='btn_dark'>Post Job</button>
+                        <button type='submit' className='btn_dark'>Edit Job</button>
                     </div>
                 </form >
             </div >
