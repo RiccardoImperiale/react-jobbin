@@ -25,7 +25,6 @@ export default function JobListings({ isHome = true }) {
 
     return (
         <section className="job_listings">
-            {console.log(loading)}
             <div className="container">
                 <h2 className="title">{isHome ? 'Recent Jobs' : 'Browse Jobs'} </h2>
                 <div className="jobs">

@@ -52,9 +52,14 @@
         input,
         textarea {
             outline: none;
+            font-family: 'poppins';
 
             &:focus {
-                border-color: var(--jo-primary);
+                border-color: var(--jo-dark);
+            }
+
+            &::placeholder {
+                font-family: 'poppins';
             }
         }
     }
