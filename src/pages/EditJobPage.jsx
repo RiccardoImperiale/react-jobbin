@@ -36,6 +36,10 @@ export default function EditJobPage({ updateJob }) {
             }
         }
 
+        if ([1, 2, 3, 4, 5, 6].includes(parseInt(id))) {
+            alert('Cannot modify this job.');
+            return navigate('/')
+        }
         await updateJob(updatedJob);
         toast.success('Job updated successfully')
         return navigate(`/jobs/${id}`)

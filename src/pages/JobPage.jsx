@@ -17,6 +17,12 @@ const JobPage = ({ deleteJob }) => {
         const confirm = window.confirm('Are you sure you want to delete this job?')
 
         if (!confirm) return
+
+        if ([1, 2, 3, 4, 5, 6].includes(parseInt(id))) {
+            alert('Cannot delete this job.');
+            return;
+        }
+
         deleteJob(id)
         toast.success('Job deleted successfully')
         navigate('/jobs')

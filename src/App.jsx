@@ -36,12 +36,13 @@ function App() {
 
   // delete job
   async function deleteJob(id) {
+
     await fetch(`https://react-jobbin-backend.onrender.com/jobs/${id}`,
       {
         method: 'delete',
       }
     )
-    return
+    return;
   }
 
   const router = createBrowserRouter(
