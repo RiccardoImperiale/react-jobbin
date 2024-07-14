@@ -73,15 +73,14 @@
     .company_info {
         width: 40%;
         display: flex;
+        gap: 2rem;
         flex-direction: column;
 
         .top {
             background-color: var(--jo-dark);
-            margin-bottom: 2rem;
             padding: 3rem;
             border-radius: .5rem;
             color: var(--jo-lighter);
-            height: fit-content;
             flex: 1;
 
             h3 {
@@ -113,7 +112,49 @@
 
         }
     }
+}
 
 
 
+@media screen and (max-width: 1080px) {
+
+    .job_page {
+        display: flex;
+        flex-direction: column;
+
+        .job_info {
+            width: 100%;
+        }
+
+        .company_info {
+            width: 100%;
+            flex-direction: row;
+
+            .bottom {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .job_page {
+        display: flex;
+        flex-direction: column;
+
+        .job_info {
+            width: 100%;
+        }
+
+        .company_info {
+            width: 100%;
+            flex-direction: column;
+
+            .bottom {
+                display: block;
+            }
+        }
+    }
 }
