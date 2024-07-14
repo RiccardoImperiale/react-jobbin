@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import '../assets/css/post_job.css'
 
-export default function PostJobPage() {
+export default function PostJobPage({ postJob }) {
     const [title, setTitle] = useState('');
     const [type, setType] = useState('Full-Time');
     const [description, setDescription] = useState('');
@@ -33,20 +33,7 @@ export default function PostJobPage() {
         }
 
         postJob(newJob);
-        console.log(newJob);
         return navigate('/jobs')
-    }
-
-    async function postJob(newJob) {
-        await fetch('http://localhost:8000/jobs', {
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newJob)
-        })
-
-        return
     }
 
     return (

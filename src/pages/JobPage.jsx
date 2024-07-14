@@ -5,22 +5,21 @@ import { IoIosArrowBack } from "react-icons/io";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { LuPhoneCall } from "react-icons/lu";
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLoaderData } from "react-router-dom";
-// import { useEffect, useState } from "react"
-// import Spinner from '../components/Spinner';
 
-function JobPage() {
+
+function JobPage({ deleteJob }) {
+    const navigate = useNavigate()
     const job = useLoaderData()
+    const onDeleteClick = (id) => {
+        const confirm = window.confirm('Are you sure you want to delete this job?')
 
+        if (!confirm) return
+        deleteJob(id)
+        navigate('/jobs')
+    }
     return (
-        // <div className="container">
-        //     {loading ? <Spinner /> : (
-        //         <>
-        //             <h2>{job.title}</h2>
-        //         </>
-        //     )}
-        // </div>
         <div className="job_page container">
             <div className="job_info">
                 <div className="top">
@@ -59,7 +58,7 @@ function JobPage() {
                 <div className="bottom">
                     <div className="actions">
                         <Link to={`/jobs/edit/${job.id}`} className='btn_dark'>Edit Job</Link>
-                        <Link href="" className='btn_dark'>Delete Job</Link>
+                        <div onClick={() => onDeleteClick(job.id)} className='btn_dark'>Delete Job</div>
                     </div>
                 </div>
             </div>

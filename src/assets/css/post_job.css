@@ -1,6 +1,8 @@
 .title {
     text-align: center;
+    padding: 3rem 0;
     margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 
 .post_job {
@@ -8,7 +10,7 @@
     border-radius: .5rem;
     background-color: var(--jo-lighter);
     max-width: 800px;
-    margin: 1rem auto;
+    margin: 0 auto;
     margin-bottom: 4rem;
 
     .input_wrapper {
