@@ -9,5 +9,5 @@
 ### [Preview](https://jobbin.netlify.app/) (wait a few sec for the server 🐢)
 
 ![alt text](./public/video.gif)
-
+![alt text](./public/screen.png)
 🗿 Thank You 🗿
