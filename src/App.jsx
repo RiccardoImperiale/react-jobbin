@@ -10,7 +10,7 @@ import EditJobPage from "./pages/EditJobPage"
 function App() {
   // add new job
   async function postJob(newJob) {
-    await fetch('http://localhost:8000/jobs', {
+    await fetch('/api/jobs', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ function App() {
 
   // update job
   async function updateJob(job) {
-    await fetch(`http://localhost:8000/jobs/${job.id}`, {
+    await fetch(`/api/jobs/${job.id}`, {
       method: 'put',
       headers: {
         'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ function App() {
 
   // delete job
   async function deleteJob(id) {
-    await fetch(`http://localhost:8000/jobs/${id}`,
+    await fetch(`/api/jobs/${id}`,
       {
         method: 'delete',
       }
