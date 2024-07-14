@@ -1,32 +1,19 @@
 import '../assets/css/job_page.css'
 import { FaLocationDot } from "react-icons/fa6";
 import { TbCoins } from "react-icons/tb";
+import { IoIosArrowBack } from "react-icons/io";
+import { MdOutlineAlternateEmail } from "react-icons/md";
+import { LuPhoneCall } from "react-icons/lu";
 
-import { useParams, useLoaderData } from "react-router-dom";
+
+import { Link } from 'react-router-dom';
+
+import { useLoaderData } from "react-router-dom";
 // import { useEffect, useState } from "react"
 // import Spinner from '../components/Spinner';
 
 function JobPage() {
-    const { id } = useParams()
     const job = useLoaderData()
-    // const [job, setJob] = useState(null)
-    // const [loading, setLoading] = useState(true)
-
-    // useEffect(() => {
-    //     const fetchJob = async () => {
-    //         try {
-    //             const res = await fetch(`http://localhost:8000/jobs/${id}`)
-    //             const data = await res.json()
-    //             setJob(data)
-    //         } catch (err) {
-    //             console.log('Error fetching data', err);
-    //         } finally {
-    //             setLoading(false)
-    //         }
-    //     }
-
-    //     fetchJob()
-    // }, [])
 
     return (
         // <div className="container">
@@ -41,12 +28,14 @@ function JobPage() {
                 <div className="top">
                     <div className='badges'>
                         <span>{job.type}</span>
+                        <span className='go_back'>
+                            <Link to='/jobs'><IoIosArrowBack /></Link>
+                        </span>
                     </div>
                     <h3 className="job_title">{job.title}</h3>
                     <div className="wrapper location"><FaLocationDot className='icon' />
                         <span>{job.location}</span>
                     </div>
-
                     <p className="description">{job.description}</p>
                 </div>
 
@@ -59,17 +48,18 @@ function JobPage() {
             </div>
             <div className="company_info">
                 <div className="top">
-
                     <h4>Company Info</h4>
-                    <h3>Compant name solurion</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quas illum. Minima odit repudiandae, labore reiciendis laudantium sapiente officia suscipit, error, nihil quis culpa sint ab alias voluptatibus? Temporibus, ex.
-                    </p>
+                    <h3>{job.company.name}</h3>
+                    <p>{job.company.description}</p>
+                    <div className="contact">
+                        <div><MdOutlineAlternateEmail className='icon' /> {job.company.contactEmail}</div>
+                        <div><LuPhoneCall className='icon' /> {job.company.contactPhone}</div>
+                    </div>
                 </div>
                 <div className="bottom">
                     <div className="actions">
-                        <a href="" className='btn_dark'>Edit Job</a>
-                        <a href="" className='btn_dark'>Delete Job</a>
+                        <Link to={`/jobs/edit/${job.id}`} className='btn_dark'>Edit Job</Link>
+                        <Link href="" className='btn_dark'>Delete Job</Link>
                     </div>
                 </div>
             </div>
