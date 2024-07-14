@@ -1,4 +1,3 @@
-# Jobbin
 ## React Job Listing App with CRUD Functionality
 
 ## ⚙️ Features ⚙️
@@ -7,7 +6,7 @@
 - React Toastify
 - React Spinners
 
-### [Preview](https://jobbin.netlify.app/)
+### [Preview](https://jobbin.netlify.app/) (wait a few sec for the server 🐢)
 
 ![alt text](./public/video.gif)
 
