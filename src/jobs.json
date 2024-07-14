@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "d8e0",
-      "title": "wefwef",
-      "type": "Full-Time",
-      "description": "fwefew",
-      "salary": "Under $50K",
-      "location": "fwef",
-      "company": {
-        "name": "fwefwe",
-        "description": "fwef",
-        "contactEmail": "ffwe@fwe.it",
-        "contactPhone": "3489628649"
-      }
     }
   ]
 }
