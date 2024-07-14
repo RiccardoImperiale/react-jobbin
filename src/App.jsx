@@ -5,6 +5,7 @@ import JobsPage from "./pages/JobsPage"
 import JobPage, { jobLoader } from "./pages/JobPage"
 import NotFound from "./pages/NotFound"
 import PostJobPage from "./pages/PostJobPage"
+import EditJobPage from "./pages/EditJobPage"
 
 function App() {
   // add new job
@@ -17,6 +18,19 @@ function App() {
       body: JSON.stringify(newJob)
     })
 
+    return
+  }
+
+  // update job
+  async function updateJob(job) {
+    await fetch(`http://localhost:8000/jobs/${job.id}`, {
+      method: 'put',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(job)
+    }
+    )
     return
   }
 
@@ -35,6 +49,7 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path="/jobs" element={<JobsPage />} />
+        <Route path="/edit-job/:id" element={<EditJobPage updateJob={updateJob} />} loader={jobLoader} />
         <Route path="/jobs/:id" element={<JobPage deleteJob={deleteJob} />} loader={jobLoader} />
         <Route path="/post-job" element={<PostJobPage postJob={postJob} />} />
         <Route path="*" element={<NotFound />} />

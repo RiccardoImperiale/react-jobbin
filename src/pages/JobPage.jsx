@@ -10,7 +10,7 @@ import { useLoaderData } from "react-router-dom";
 import { toast } from 'react-toastify';
 
 
-function JobPage({ deleteJob }) {
+const JobPage = ({ deleteJob }) => {
     const navigate = useNavigate()
     const job = useLoaderData()
     const onDeleteClick = (id) => {
@@ -59,7 +59,7 @@ function JobPage({ deleteJob }) {
                 </div>
                 <div className="bottom">
                     <div className="actions">
-                        <Link to={`/jobs/edit/${job.id}`} className='btn_dark'>Edit Job</Link>
+                        <Link to={`/edit-job/${job.id}`} className='btn_dark'>Edit Job</Link>
                         <div onClick={() => onDeleteClick(job.id)} className='btn_dark'>Delete Job</div>
                     </div>
                 </div>

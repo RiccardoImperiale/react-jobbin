@@ -97,20 +97,6 @@
         "contactEmail": "ffwe@fwe.it",
         "contactPhone": "3489628649"
       }
-    },
-    {
-      "id": "865d",
-      "title": "fwe",
-      "type": "Internship",
-      "description": "fwe",
-      "salary": "$70K - 80K",
-      "location": "fwef",
-      "company": {
-        "name": "Boolean",
-        "description": "fwe",
-        "contactEmail": "ffwe@fwe.it",
-        "contactPhone": ""
-      }
     }
   ]
 }
