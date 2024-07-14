@@ -5,9 +5,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { LuPhoneCall } from "react-icons/lu";
 
-
 import { Link } from 'react-router-dom';
-
 import { useLoaderData } from "react-router-dom";
 // import { useEffect, useState } from "react"
 // import Spinner from '../components/Spinner';
@@ -33,9 +31,11 @@ function JobPage() {
                         </span>
                     </div>
                     <h3 className="job_title">{job.title}</h3>
-                    <div className="wrapper location"><FaLocationDot className='icon' />
-                        <span>{job.location}</span>
-                    </div>
+                    {job.location && <>
+                        <div className="wrapper location"><FaLocationDot className='icon' />
+                            <span>{job.location}</span>
+                        </div>
+                    </>}
                     <p className="description">{job.description}</p>
                 </div>
 
@@ -53,7 +53,7 @@ function JobPage() {
                     <p>{job.company.description}</p>
                     <div className="contact">
                         <div><MdOutlineAlternateEmail className='icon' /> {job.company.contactEmail}</div>
-                        <div><LuPhoneCall className='icon' /> {job.company.contactPhone}</div>
+                        {job.company.contactPhone && <div><LuPhoneCall className='icon' /> {job.company.contactPhone}</div>}
                     </div>
                 </div>
                 <div className="bottom">

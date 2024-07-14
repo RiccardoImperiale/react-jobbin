@@ -126,13 +126,12 @@
             }
 
             .contact {
-                /* border-top: 1px solid var(--jo-secondary-dark); */
                 border-top: 1px solid rgb(0, 0, 0);
                 margin-top: 2rem;
                 padding-top: 2rem;
 
-                div:first-child {
-                    margin-bottom: .5rem;
+                div:last-child {
+                    margin-top: .5rem;
                 }
 
                 div {

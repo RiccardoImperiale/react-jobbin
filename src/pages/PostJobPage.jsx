@@ -33,11 +33,12 @@ export default function PostJobPage() {
         }
 
         postJob(newJob);
+        console.log(newJob);
         return navigate('/jobs')
     }
 
     async function postJob(newJob) {
-        const res = await fetch('http://localhost:8000/jobs', {
+        await fetch('http://localhost:8000/jobs', {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
@@ -57,7 +58,7 @@ export default function PostJobPage() {
 
                     {/* JOB TITLE */}
                     <div className="input_group">
-                        <label htmlFor="title">Title</label>
+                        <label htmlFor="title">Title*</label>
                         <input type="text" name="title" id="title" placeholder="Job Title"
                             required
                             value={title}
@@ -67,7 +68,7 @@ export default function PostJobPage() {
 
                     {/* JOB TYPE  */}
                     <div className="input_group">
-                        <label htmlFor="type">Type</label>
+                        <label htmlFor="type">Type*</label>
                         <select name="type" id="type"
                             required
                             value={type}
@@ -84,7 +85,6 @@ export default function PostJobPage() {
                     <div className="input_group">
                         <label htmlFor='description'>Description</label>
                         <textarea id='description' name='description' rows='4' placeholder='Add any job duties, expectations, requirements, etc'
-                            required
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                         ></textarea>
@@ -93,9 +93,8 @@ export default function PostJobPage() {
                     <div className="input_wrapper">
                         {/* SALARY */}
                         <div className='input_group'>
-                            <label htmlFor='salary'>Salary</label>
+                            <label htmlFor='salary'>Salary*</label>
                             <select id='salary' name='salary'
-                                required
                                 value={salary}
                                 onChange={(e) => setSalary(e.target.value)}
                             >
@@ -117,7 +116,6 @@ export default function PostJobPage() {
                         <div className='input_group'>
                             <label htmlFor="location">Location</label>
                             <input type='text' id='location' name='location' placeholder='Company Location'
-                                required
                                 value={location}
                                 onChange={(e) => setLocation(e.target.value)}
                             />
@@ -128,7 +126,7 @@ export default function PostJobPage() {
 
                     {/* COMPANY NAME */}
                     <div className='input_group'>
-                        <label htmlFor='company'>Company Name</label>
+                        <label htmlFor='company'>Company Name*</label>
                         <input type='text' id='company' name='company' placeholder='Company Name'
                             required
                             value={companyName}
@@ -142,7 +140,6 @@ export default function PostJobPage() {
                             Company Description
                         </label>
                         <textarea id='company_description' name='company_description' rows='4' placeholder='What does your company do?'
-                            required
                             value={companyDescription}
                             onChange={(e) => setCompanyDescription(e.target.value)}
                         ></textarea>
@@ -151,7 +148,7 @@ export default function PostJobPage() {
                     <div className="input_wrapper">
                         {/* COMPANY EMAIL */}
                         <div className='input_group'>
-                            <label htmlFor='contact_email'>Contact Email</label>
+                            <label htmlFor='contact_email'>Contact Email*</label>
                             <input type='email' id='contact_email' name='contact_email' placeholder='Email address for applicants'
                                 required
                                 value={contactEmail}
@@ -163,7 +160,6 @@ export default function PostJobPage() {
                         <div className='input_group'>
                             <label htmlFor='contact_phone'>Contact Phone</label>
                             <input type='tel' id='contact_phone' name='contact_phone' placeholder='Optional phone for applicants'
-                                required
                                 value={contactPhone}
                                 onChange={(e) => setContactPhone(e.target.value)}
                             />

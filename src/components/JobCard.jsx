@@ -16,17 +16,22 @@ export default function JobCard({ job }) {
                     <span>{job.type}</span>
                 </div>
                 <h3 className="job_title">{job.title}</h3>
-                <p className="description">{description}</p>
-                <small onClick={() => setShowMore(!showMore)} className="show_more">
-                    {showMore ? 'Show Less' : 'Show More'}
-                </small>
+                {job.description && <>
+                    <p className="description">{description}</p>
+                    <small onClick={() => setShowMore(!showMore)} className="show_more">
+                        {showMore ? 'Show Less' : 'Show More'}
+                    </small>
+                </>}
             </div>
 
             <div className="bottom_card">
                 <div className="salary">{job.salary} <span>/ Year</span></div>
                 <div className="wrapper">
-                    <div className="location"><FaLocationDot className='icon' />
-                        <span>{job.location}</span>
+                    <div className="location">
+                        {job.location && <>
+                            <FaLocationDot className='icon' />
+                            <span>{job.location}</span>
+                        </>}
                     </div>
                     <Link className='btn_dark' to={`/jobs/${job.id}`}>Read More</Link>
                 </div>
