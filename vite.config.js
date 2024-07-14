@@ -7,11 +7,10 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        // target: 'http://localhost:8000',
-        target: 'https://react-jobbin-backend.onrender.com/jobs',
+        target: 'https://react-jobbin-backend.onrender.com/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
-  }
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 })
