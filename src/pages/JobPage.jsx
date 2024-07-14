@@ -7,6 +7,7 @@ import { LuPhoneCall } from "react-icons/lu";
 
 import { Link, useNavigate } from 'react-router-dom';
 import { useLoaderData } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 
 function JobPage({ deleteJob }) {
@@ -17,6 +18,7 @@ function JobPage({ deleteJob }) {
 
         if (!confirm) return
         deleteJob(id)
+        toast.success('Job deleted successfully')
         navigate('/jobs')
     }
     return (

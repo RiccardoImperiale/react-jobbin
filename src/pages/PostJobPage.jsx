@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import '../assets/css/post_job.css'
+import { toast } from 'react-toastify';
 
 export default function PostJobPage({ postJob }) {
     const [title, setTitle] = useState('');
@@ -33,6 +34,7 @@ export default function PostJobPage({ postJob }) {
         }
 
         postJob(newJob);
+        toast.success('Job created successfully')
         return navigate('/jobs')
     }
 
