@@ -1,0 +1,119 @@
+.job_page {
+    padding: 3rem 0;
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+
+    .job_info {
+        border-radius: .5rem;
+        width: 60%;
+        padding: 3rem;
+        background-color: var(--jo-lighter);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .badges {
+            display: flex;
+
+            span {
+                padding: .45rem 1.5rem;
+                display: block;
+                border-radius: 2rem;
+                border: 1px solid var(--jo-secondary);
+                color: var(--jo-secondary-dark);
+            }
+        }
+
+        .job_title {
+            font-size: 1.8rem;
+            padding-top: 1rem;
+            padding-bottom: .5rem;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .wrapper.location {
+            border-bottom: 1px solid #e4e4e4;
+            padding-bottom: 2rem;
+
+            .icon {
+                font-size: 1.25rem;
+            }
+        }
+
+        .wrapper.salary_title {
+            margin-top: 2rem;
+
+            .icon {
+                font-size: 1.6rem;
+            }
+        }
+
+        .description {
+            padding: 2rem 0;
+        }
+
+        .salary {
+            padding-top: 1rem;
+            color: var(--jo-primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .company_info {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+
+        .top {
+            background-color: var(--jo-dark);
+            margin-bottom: 2rem;
+            padding: 3rem;
+            border-radius: .5rem;
+            color: var(--jo-lighter);
+            height: fit-content;
+            flex: 1;
+
+            h3 {
+                margin-bottom: 2rem;
+            }
+
+            h4 {
+                color: var(--jo-secondary-dark);
+                font-weight: 300;
+            }
+
+            p {
+                border-top: 1px solid var(--jo-secondary-dark);
+                padding-top: 2rem;
+            }
+        }
+
+        .bottom {
+            background-color: var(--jo-lighter);
+            padding: 3rem;
+            border-radius: .5rem;
+
+            .btn_dark:first-child {
+                margin-bottom: 1rem;
+                background-color: var(--jo-primary);
+                color: var(--jo-dark);
+                font-weight: 500;
+            }
+
+        }
+    }
+
+
+
+}

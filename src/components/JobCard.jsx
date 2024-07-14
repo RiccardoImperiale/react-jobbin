@@ -28,7 +28,7 @@ export default function JobCard({ job }) {
                     <div className="location"><FaLocationDot className='icon' />
                         <span>{job.location}</span>
                     </div>
-                    <Link className='btn_dark' to={`/job/${job.id}`}>Read More</Link>
+                    <Link className='btn_dark' to={`/jobs/${job.id}`}>Read More</Link>
                 </div>
             </div>
         </div>
