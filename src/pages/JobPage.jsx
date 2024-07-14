@@ -4,24 +4,21 @@ import { TbCoins } from "react-icons/tb";
 import { IoIosArrowBack } from "react-icons/io";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { LuPhoneCall } from "react-icons/lu";
-
-import { Link, useNavigate } from 'react-router-dom';
-import { useLoaderData } from "react-router-dom";
+import { Link, useNavigate, useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
-
 
 const JobPage = ({ deleteJob }) => {
     const navigate = useNavigate()
     const job = useLoaderData()
     const onDeleteClick = (id) => {
-        const confirm = window.confirm('Are you sure you want to delete this job?')
-
-        if (!confirm) return
-
-        if ([1, 2, 3, 4, 5, 6].includes(parseInt(id))) {
+        if (['1', '2', '3', '4', '5', '6'].includes(id)) {
             alert('Cannot delete this job.');
             return;
         }
+
+        const confirm = window.confirm('Are you sure you want to delete this job?')
+
+        if (!confirm) return
 
         deleteJob(id)
         toast.success('Job deleted successfully')

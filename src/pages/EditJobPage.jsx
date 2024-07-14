@@ -35,10 +35,9 @@ export default function EditJobPage({ updateJob }) {
                 contactPhone
             }
         }
-
-        if ([1, 2, 3, 4, 5, 6].includes(parseInt(id))) {
+        if (['1', '2', '3', '4', '5', '6'].includes(id)) {
             alert('Cannot modify this job.');
-            return navigate('/')
+            return navigate(`/jobs/${id}`)
         }
         await updateJob(updatedJob);
         toast.success('Job updated successfully')
