@@ -7,7 +7,10 @@
 - React Spinners
 
 ```zsh
-git clone 
+git clone https://github.com/RiccardoImperiale/react-jobbin.git
+```
+
+```zsh
 npm i
 npm run dev
 ```
