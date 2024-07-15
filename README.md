@@ -2,7 +2,7 @@
 
 ## ⚙️ Features ⚙️
 - React Routing
-- Mock Backend using JSON Server ♡( ◡‿◡ )
+- JSON Server ♡( ◡‿◡ )
 - React Toastify
 - React Spinners
 
@@ -21,4 +21,6 @@ npm run server
 
 ![alt text](./public/video.gif)
 ![alt text](./public/screen.png)
-🗿 Thank You 🗿
+
+
+## 🗿 Thank You 🗿 
