@@ -10,20 +10,19 @@ import EditJobPage from "./pages/EditJobPage"
 function App() {
   // add new job
   async function postJob(newJob) {
-    await fetch('https://react-jobbin-backend.onrender.com/jobs', {
+    await fetch('api/jobs', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(newJob)
     })
-
     return
   }
 
   // update job
   async function updateJob(job) {
-    await fetch(`https://react-jobbin-backend.onrender.com/jobs/${job.id}`, {
+    await fetch(`api/jobs/${job.id}`, {
       method: 'put',
       headers: {
         'Content-Type': 'application/json'
@@ -37,7 +36,7 @@ function App() {
   // delete job
   async function deleteJob(id) {
 
-    await fetch(`https://react-jobbin-backend.onrender.com/jobs/${id}`,
+    await fetch(`api/jobs/${id}`,
       {
         method: 'delete',
       }
