@@ -25,7 +25,7 @@ export default function Header() {
                         <ul>
                             <li><NavLink to="/" className={linkClass}>Home</NavLink></li>
                             <li><NavLink to="/jobs" className={linkClass}>Jobs</NavLink></li>
-                            <li><NavLink className='btn_dark' to="/register">Post a Job <FaPaperPlane /></NavLink></li>
+                            <li><NavLink className='btn_dark' to="/post-job">Post a Job <FaPaperPlane /></NavLink></li>
                         </ul>
                     </div>
                     <div className="btn_dark mob_btn_pill" onClick={toggleMenu}>
@@ -42,7 +42,7 @@ export default function Header() {
                 <nav className="container">
                     <NavLink to="/" className={linkClass}>Home</NavLink>
                     <NavLink to="/jobs" className={linkClass}>Jobs</NavLink>
-                    <NavLink className='btn_dark' to="/register">Post a Job <FaPaperPlane /></NavLink>
+                    <NavLink className='btn_dark' to="/post-job">Post a Job <FaPaperPlane /></NavLink>
                 </nav>
             </motion.div>
 
