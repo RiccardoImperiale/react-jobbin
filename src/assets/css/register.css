@@ -1,0 +1,106 @@
+.title {
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.register {
+    padding: 2rem 3rem;
+    border-radius: .5rem;
+    background-color: var(--jo-lighter);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+
+    .input_wrapper {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .input_group {
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+        label {
+            font-weight: 600;
+        }
+
+        input,
+        select,
+        textarea,
+        label {
+            width: 100%;
+            margin-top: .5rem;
+            border-radius: .4rem;
+        }
+
+        input,
+        select,
+        textarea {
+            border: 1px solid var(--jo-secondary);
+        }
+
+        textarea {
+            padding: 1rem;
+        }
+
+        input,
+        select {
+            padding-left: 1rem;
+            height: 35px;
+        }
+
+        input,
+        textarea {
+            outline: none;
+            font-family: 'poppins';
+
+            &:focus {
+                border-color: var(--jo-dark);
+            }
+
+            &::placeholder {
+                font-family: 'poppins';
+            }
+        }
+    }
+
+    h3 {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+        color: var(--jo-primary);
+        font-size: 1.5rem;
+    }
+
+    h3:first-child {
+        padding-top: .5rem;
+    }
+
+    .bottom {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+
+        h5 {
+            color: var(--jo-secondary);
+        }
+
+        button {
+            margin-left: auto;
+            border: none;
+            font-size: 1rem;
+            padding: .8rem 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post_job {
+
+        .input_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0rem;
+        }
+    }
+}

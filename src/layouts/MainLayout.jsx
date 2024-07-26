@@ -4,7 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Header from "../components/Header"
 
 export default function MainLayout() {
-    const notify = () => toast("Wow so easy!");
 
     return (
         <>

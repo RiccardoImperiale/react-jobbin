@@ -6,6 +6,7 @@ import JobPage, { jobLoader } from "./pages/JobPage"
 import NotFound from "./pages/NotFound"
 import PostJobPage from "./pages/PostJobPage"
 import EditJobPage from "./pages/EditJobPage"
+import RegisterPage from "./pages/RegisterPage"
 
 function App() {
   // add new job
@@ -51,6 +52,7 @@ function App() {
         <Route path="/jobs" element={<JobsPage />} />
         <Route path="/edit-job/:id" element={<EditJobPage updateJob={updateJob} />} loader={jobLoader} />
         <Route path="/jobs/:id" element={<JobPage deleteJob={deleteJob} />} loader={jobLoader} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route path="/post-job" element={<PostJobPage postJob={postJob} />} />
         <Route path="*" element={<NotFound />} />
       </Route>
